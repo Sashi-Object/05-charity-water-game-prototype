@@ -7,7 +7,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the Charity Water Game Prototype</h1>
+    <main class="game-shell">
+        <h1>Charity: Water River Crossing</h1>
+
+        <section class="game-area" id="gameArea" aria-label="River game area">
+            <section class="hud" aria-label="Game status">
+                <p class="lives">Lives: <span id="livesValue">3</span></p>
+                <p class="score">Score: <span id="scoreValue">0</span></p>
+            </section>
+
+            <div class="log" style="top: 10%; left: 20%; width: 62%;"></div>
+            <div class="log" style="top: 22%; left: 12%; width: 68%;"></div>
+            <div class="log" style="top: 34%; left: 24%; width: 58%;"></div>
+            <div class="log" style="top: 46%; left: 16%; width: 66%;"></div>
+            <div class="log" style="top: 58%; left: 22%; width: 60%;"></div>
+            <div class="log" style="top: 70%; left: 14%; width: 70%;"></div>
+            <div class="log" style="top: 82%; left: 20%; width: 64%;"></div>
+            <div class="log" style="top: 90%; left: 10%; width: 78%;"></div>
+
+            <div id="dropsLayer" aria-hidden="true"></div>
+            <div id="player" aria-label="Player"></div>
+            <p id="statusMessage" class="status-message" aria-live="polite"></p>
+        </section>
+
+        <section class="controls" aria-label="Movement controls">
+            <button id="leftButton" type="button" aria-label="Move left">◀ Left</button>
+            <button id="upButton" type="button" aria-label="Move up">▲ Up</button>
+            <button id="downButton" type="button" aria-label="Move down">▼ Down</button>
+            <button id="rightButton" type="button" aria-label="Move right">Right ▶</button>
+        </section>
+
+        <button id="restartButton" class="restart-button" type="button" aria-label="Restart game">
+            Restart Game
+        </button>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
